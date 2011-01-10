@@ -152,7 +152,7 @@
     }
   });
 
-  Remote = $.klass({
+  var Remote = $.klass({
     initialize: function(options) {
       if (this.element.attr('nodeName') == 'FORM') this.element.attach(Remote.Form, options);
       else this.element.attach(Remote.Link, options);
