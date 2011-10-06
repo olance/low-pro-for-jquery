@@ -77,7 +77,7 @@
 
       return klass;
     },
-    delegate: function(rules) {
+    eventDelegate: function(rules) {
       return function(e) {
         var target = $(e.target), parent = null;
         for (var selector in rules) {
@@ -131,8 +131,8 @@
       attachBehavior(this, behavior, args);
       return this;
     },
-    delegate: function(type, rules) {
-      return this.bind(type, $.delegate(rules));
+    eventDelegate: function(type, rules) {
+      return this.bind(type, $.eventDelegate(rules));
     },
     attached: function(behavior) {
       var instances = [];
